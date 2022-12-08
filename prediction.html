@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="" en>
+  <head>
+    <meta charset="UTF-8" />
+    <title>HQF Predictor</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+     <!-- Nav bar -->
+    <nav class="navbar navbar-expand-lg bg-success navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">HQF</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Predictor</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Results
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container-fluid text-center">    
+        <div class="row content">
+          <div class="col-sm-2 sidenav">
+          </div>
+    
+          <div class="col-sm-8 text-left"> 
+            <h1>Predictor</h1>
+            <p>Please input all of the values of your consumer below and click on the button below: </p>
+            <break></break>
+            <div class="col-auto my-1">
+                <label class="mr-sm-2" for="inlineFormCustomSelect">Accomodation</label>
+                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                  <option selected>Choose...</option>
+                  <option value="1">Owned</option>
+                  <option value="2">Rented</option>
+                </select>
+              </div>
+              <break></break>
+              <div class="col-auto my-1">
+                <label class="mr-sm-2" for="inlineFormCustomSelect">Insurance Type</label>
+                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                  <option selected>Choose...</option>
+                  <option value="1">Individual</option>
+                  <option value="2">Joint</option>
+                </select>
+              </div>
+              <div class="col-auto my-1">
+                <label class="mr-sm-2" for="inlineFormCustomSelect">Do you have a spouse</label>
+                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                  <option selected>Choose...</option>
+                  <option value="1">Yes</option>
+                  <option value="2">No</option>
+                </select>
+              </div>
+            <div class="form-group">
+                <label for="sel1">Health Indicator:</label>
+                <select class="form-control" id="sel1">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+                </select>
+              </div>
+              <div>
+                <legend class="col-form-label col-sm-2 pt-0">Holding Policy Type</legend>
+                <label class="radio-inline"><input type="radio" name="optradio" checked>Option 1</label>
+                <label class="radio-inline"><input type="radio" name="optradio">Option 2</label>
+                <label class="radio-inline"><input type="radio" name="optradio">Option 3</label>
+                <label class="radio-inline"><input type="radio" name="optradio">Option 4</label>
+              </div>
+              <break></break>
+              <form>
+              <div class="input-group">
+                <span class="input-group-addon">Upper Age</span>
+                <input id="msg" type="text" class="form-control" name="msg" placeholder="Age of Oldest policyholder">
+              </div>
+              <div class="input-group">
+                <span class="input-group-addon">Lower Age</span>
+                <input id="msg" type="text" class="form-control" name="msg" placeholder="Age of Lower policyholder">
+              </div>
+            </form>
+              <break></break>
+              <div class="form-group">
+                <label for="sel1">Recommended Policy Category:</label>
+                <select class="form-control" id="sel1">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+                  <option>10</option>
+                  <option>12</option>
+                  <option>13</option>
+                  <option>14</option>
+                  <option>15</option>
+                  <option>16</option>
+                  <option>17</option>
+                  <option>18</option>
+                  <option>19</option>
+                  <option>20</option>
+                  <option>21</option>
+                  <option>22</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="sel1">Holding Policy Duration:</label>
+                <select class="form-control" id="sel1">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+                  <option>10</option>
+                  <option>11</option>
+                  <option>12</option>
+                  <option>13</option>
+                  <option>14</option>
+                  <option>14+</option>
+                </select>
+              </div>
+              <div>
+                <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
+                <label class="radio-inline"><input type="radio" name="optradio" checked>Option 1</label>
+                <label class="radio-inline"><input type="radio" name="optradio">Option 2</label>
+                <label class="radio-inline"><input type="radio" name="optradio">Option 3</label>
+              </div>
+              <div class="input-group">
+                <span class="input-group-addon">Policy Premium</span>
+                <input id="msg" type="text" class="form-control" name="msg" placeholder="Additional Info">
+              </div>
+            
+              <button type="button" class="btn btn-success btn-lg btn-block">Predict</button>
+
+            <hr>
+            <h3>Are they likely to engage with campaign?</h3>
+            <p>Maybe....</p>
+          </div>
+    
+
+          <div class="col-sm-2 sidenav">
+          </div>
+        </div>
+      </div>
+
+      <footer class="container-fluid text-center bg-success">
+        <p>Need a Doctor? Pay the Quokka!</p>
+      </footer>
+  </body>
+</html>
