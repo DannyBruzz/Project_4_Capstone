@@ -1,0 +1,52 @@
+
+.navbar {
+    color: rgb(7, 182, 7);
+}
+
+
+.header {
+    padding: 40px;
+    color: rgb(7, 182, 7);
+    text-emphasis: 20px;
+  }
+
+h2 {
+    color: rgb(7, 182, 7);
+    padding: 20px;
+}
+
+.sidebar{
+    float:left;
+    clear: both;
+}
+
+.main figure {
+    float:right;
+}
+p {
+    padding: 20px;
+    font-weight: bold;
+}
+
+.row.content {height: 450px}
+
+.sidenav {
+    padding-top: 20px;
+    background-color: #f1f1f1;
+    height: 100%;
+  }
+
+
+  footer {
+    color: white;
+    padding: 15px;
+  }
+  .row.content {height: 450px}
+
+  @media screen and (max-width: 767px) {
+    .sidenav {
+      height: auto;
+      padding: 15px;
+    }
+    .row.content {height:auto;} 
+  }
