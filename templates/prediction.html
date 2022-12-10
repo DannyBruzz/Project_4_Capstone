@@ -49,6 +49,7 @@
             <h1>Predictor</h1>
             <p>Please input all of the values of your consumer below and click on the button below: </p>
             <break></break>
+            <form action="/prediction" method="POST">
             <div class="col-auto my-1">
                 <label class="mr-sm-2" for="inlineFormCustomSelect">Accomodation</label>
                 <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
@@ -151,22 +152,16 @@
                   <option>14+</option>
                 </select>
               </div>
-              <div>
-                <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
-                <label class="radio-inline"><input type="radio" name="optradio" checked>Option 1</label>
-                <label class="radio-inline"><input type="radio" name="optradio">Option 2</label>
-                <label class="radio-inline"><input type="radio" name="optradio">Option 3</label>
-              </div>
               <div class="input-group">
                 <span class="input-group-addon">Policy Premium</span>
                 <input id="msg" type="text" class="form-control" name="msg" placeholder="Additional Info">
               </div>
             
-              <button type="button" class="btn btn-success btn-lg btn-block">Predict</button>
-
+              <input type="submit" value="Submit">
+            </form>
             <hr>
             <h3>Are they likely to engage with campaign?</h3>
-            <p>Maybe....</p>
+            <h1> {{ prediction }}</h1>
           </div>
     
 
