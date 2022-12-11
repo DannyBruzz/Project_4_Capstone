@@ -188,7 +188,7 @@ function amendDF() {
        let value10 = q10.value;
        console.log(value10)
        default_df.Reco_Policy_Premium = default_df.Reco_Policy_Premium.toString().replace(0, value10)
-
+       
 
        console.log(default_df)
 
@@ -204,8 +204,8 @@ function amendDF() {
 //               df.col = df.col.replace(curr,numV)
 //        }
 //        console.log(df)
-// }
+// // }
 
-test = Object.entries(default_df)
+// test = Object.entries(default_df)
 
-console.log(test)
+// console.log(test)
