@@ -12,6 +12,10 @@ from flask import Flask, render_template
 import psycopg2
 from psycopg2 import OperationalError
 
+# from keras.models import load_model 
+
+# model = load_model('modelV1.h5')
+
 
 
 # Flask Setup
@@ -29,6 +33,17 @@ def index():
 def map_view():
     return render_template("prediction.html")
 
+
+@app.route("/results")
+def dash_view():
+    return render_template("results.html")
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
+
+
+
 # prediction function
 # def ValuePredictor(to_predict_list):
 #     with h5py.File("modelV1.h5", 'r') as hf:
@@ -42,8 +57,21 @@ def map_view():
 #     result = classifier.predict(to_predict_list)
 #     return result[0]
 
+# @app.route("/prediction",  methods = ['POST'])
+# def predict():
+#     scaler = StandardScaler()
+#     X_scaler = scaler.fit(df_inputs)
+#     to_predict_list = X_scaler.transform(df_inputs)
+#     result = ValuePredictor(to_predict_list)       
+#     if int(result)== 1:
+#         prediction ='Yes'
+#     else:
+#         prediction ='No'           
+#     return render_template("ddd.html", prediction = prediction)
 
-    
+
+
+
 # @app.route("/prediction",  methods = ['POST'])
 # def result():
 #     if request.method == 'POST':
@@ -58,10 +86,3 @@ def map_view():
 #         return render_template("prediction.html", prediction = prediction)
 
 # Set route : Results
-@app.route("/results")
-def dash_view():
-    return render_template("results.html")
-
-
-if __name__ == "__main__":
-    app.run(debug=True)
