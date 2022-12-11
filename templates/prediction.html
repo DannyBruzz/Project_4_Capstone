@@ -51,7 +51,7 @@
             <break></break>
             <form>
             <div class="col-auto my-1">
-                <label class="mr-sm-2" for="inlineFormCustomSelect">Accomodation</label>
+                <label class="mr-sm-2" for="inlineFormCustomSelect1">Accomodation</label>
                 <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
                   <option selected>Choose...</option>
                   <option value="1">Owned</option>
@@ -60,16 +60,16 @@
               </div>
               <break></break>
               <div class="col-auto my-1">
-                <label class="mr-sm-2" for="inlineFormCustomSelect">Insurance Type</label>
-                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                <label class="mr-sm-2" for="inlineFormCustomSelect2">Insurance Type</label>
+                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect2">
                   <option selected>Choose...</option>
                   <option value="1">Individual</option>
                   <option value="2">Joint</option>
                 </select>
               </div>
               <div class="col-auto my-1">
-                <label class="mr-sm-2" for="inlineFormCustomSelect">Do you have a spouse</label>
-                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                <label class="mr-sm-2" for="inlineFormCustomSelect3">Do you have a spouse</label>
+                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect3">
                   <option selected>Choose...</option>
                   <option value="1">Yes</option>
                   <option value="2">No</option>
@@ -77,7 +77,8 @@
               </div>
             <div class="form-group">
                 <label for="sel1">Health Indicator:</label>
-                <select class="form-control" id="sel1">
+                <select class="form-control" id="q4">
+                  <option>0</option>
                   <option>1</option>
                   <option>2</option>
                   <option>3</option>
@@ -91,7 +92,7 @@
               </div>
               <div>
                 <legend class="col-form-label col-sm-2 pt-0">Holding Policy Type</legend>
-                <label class="radio-inline"><input type="radio" name="optradio" checked>Option 1</label>
+                <label class="radio-inline"><input type="radio" name="optradio" checked id = "q5">Option 1</label>
                 <label class="radio-inline"><input type="radio" name="optradio">Option 2</label>
                 <label class="radio-inline"><input type="radio" name="optradio">Option 3</label>
                 <label class="radio-inline"><input type="radio" name="optradio">Option 4</label>
@@ -100,17 +101,17 @@
               <form>
               <div class="input-group">
                 <span class="input-group-addon">Upper Age</span>
-                <input id="msg" type="text" class="form-control" name="msg" placeholder="Age of Oldest policyholder">
+                <input id="q6" type="text" class="form-control" name="msg" placeholder="Age of Oldest policyholder">
               </div>
               <div class="input-group">
                 <span class="input-group-addon">Lower Age</span>
-                <input id="msg" type="text" class="form-control" name="msg" placeholder="Age of Lower policyholder">
+                <input id="q7" type="text" class="form-control" name="msg" placeholder="Age of Lower policyholder">
               </div>
             </form>
               <break></break>
               <div class="form-group">
                 <label for="sel1">Recommended Policy Category:</label>
-                <select class="form-control" id="sel1">
+                <select class="form-control" id="q8">
                   <option>1</option>
                   <option>2</option>
                   <option>5</option>
@@ -134,7 +135,7 @@
               </div>
               <div class="form-group">
                 <label for="sel1">Holding Policy Duration:</label>
-                <select class="form-control" id="sel1">
+                <select class="form-control" id="q9">
                   <option>1</option>
                   <option>2</option>
                   <option>3</option>
@@ -154,10 +155,10 @@
               </div>
               <div class="input-group">
                 <span class="input-group-addon">Policy Premium</span>
-                <input id="msg" type="text" class="form-control" name="msg" placeholder="Additional Info">
+                <input id="q10" type="text" class="form-control" name="msg" placeholder="Additional Info">
               </div>
             
-              <input type="submit" value="Submit">
+              <input type="submit"  id = "done" value="Submit">
             </form>
             <hr>
             <h3>Are they likely to engage with campaign?</h3>
@@ -173,6 +174,7 @@
       <footer class="container-fluid text-center bg-success">
         <p>Need a Doctor? Pay the Quokka!</p>
       </footer>
+      <script src="https://d3js.org/d3.v5.min.js"></script>
       <script type="text/javascript" src="..\static\form.js"></script>
   </body>
 </html>
