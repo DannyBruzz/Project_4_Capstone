@@ -192,6 +192,20 @@ function amendDF() {
 
        console.log(default_df)
 
+       // convertNumerals(default_df)
 }
 
+// function convertNumerals (df){
+//        let column =  df.keys
+//        for (i = 0; column.length; i++ ){
+//               col = column[i];
+//               curr = col.values
+//               numV = Number(curr)
+//               df.col = df.col.replace(curr,numV)
+//        }
+//        console.log(df)
+// }
 
+test = Object.entries(default_df)
+
+console.log(test)
