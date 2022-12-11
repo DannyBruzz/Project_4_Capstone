@@ -7,7 +7,7 @@ import numpy as np
 import pandas as pd
 import psycopg2
 
-
+import h5py
 from flask import Flask, render_template
 import psycopg2
 from psycopg2 import OperationalError
@@ -38,26 +38,36 @@ def map_view():
 def dash_view():
     return render_template("results.html")
 
+def ValuePredictor():
+    with h5py.File("static/modelV1.h5", 'r') as hf:
+        coef = hf['coef'][:]
+        intercept = hf['intercept'][:]
+        classes = hf['classes'][:]
+    print(coef)
+
 
 if __name__ == "__main__":
     app.run(debug=True)
+    
 
-
+# @app.route("/receiver", methods=["POST"])
+# def postME():
+#  data = request.get_json()
+#  data = jsonify(data)
+#  return data
 
 # prediction function
-# def ValuePredictor(to_predict_list):
-#     with h5py.File("modelV1.h5", 'r') as hf:
-#         coef = hf['coef'][:]
-#         intercept = hf['intercept'][:]
-#         classes = hf['classes'][:]
-#     LogisticRegression = classifier
-#     classifier.coef_ = coef
-#     classifier.intercept_ = intercept
-#     classifier.classes_ = classes
-#     result = classifier.predict(to_predict_list)
-#     return result[0]
 
-# @app.route("/prediction",  methods = ['POST'])
+
+
+    # LogisticRegression = classifier
+    # classifier.coef_ = coef
+    # classifier.intercept_ = intercept
+    # classifier.classes_ = classes
+    # result = classifier.predict(to_predict_list)
+    # return result[0]
+
+# @app.route("/tester",  methods = ['POST'])
 # def predict():
 #     scaler = StandardScaler()
 #     X_scaler = scaler.fit(df_inputs)
@@ -67,22 +77,7 @@ if __name__ == "__main__":
 #         prediction ='Yes'
 #     else:
 #         prediction ='No'           
-#     return render_template("ddd.html", prediction = prediction)
+#     return render_template("prediction.html", prediction = prediction)
 
-
-
-
-# @app.route("/prediction",  methods = ['POST'])
-# def result():
-#     if request.method == 'POST':
-#         to_predict_list = request.form.to_dict()
-#         to_predict_list = list(to_predict_list.values())
-#         to_predict_list = list(map(int, to_predict_list))
-#         result = ValuePredictor(to_predict_list)       
-#         if int(result)== 1:
-#             prediction ='Yes'
-#         else:
-#             prediction ='INo'           
-#         return render_template("prediction.html", prediction = prediction)
 
 # Set route : Results
