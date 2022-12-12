@@ -52,7 +52,6 @@ Project
 ├── .gitignore
 ├── image
 │   └── universe25.png
-├── requirements.txt
 
 ```
 
