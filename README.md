@@ -8,15 +8,30 @@ HQF (Health Quokka Fund) has received the below dataset of a recent ad campaign 
 ## Process
 
 Extracting:  
-Dataset extracted from Kaggle wesite into Google Collab notebook.
+* Dataset extracted from Kaggle wesite into Google Collab notebook.
 
 Transforming Data:  
-* Data filtered to one city, which has 8973
+* Data filtered to one city, which has 8973 values
+* Unnnecessary columns deleted, as well as any duplicates
+* Visualisation csv created with target column
+* Model csv created without target column
 
-Load:  
-We plan on displaying these merged datasets as tables on postgreSQL.   
+Model Testing:  
+* Model csv loaded into Google Collab notebook with Pyspark and sklearn utilised
+* Data scaled and transformed via StandardScaler
+* Model undergoes hyperparameter tuning via LogisticRegression, RandomForestClassifier, ExtraTreesClassifier & AdaBoostClassifier
+* Tuned model saved in h5 file
 
+Visualisations:
+* Visualisations csv loaded into Tableau
+* Tableau workbook saved to Tableau public (url: https://public.tableau.com/app/profile/danny1843/viz/Project4_16703288498090/SpouseTotal)
 
+Web Development:
+* Flask, HTML, CSS, Javascript & Githubpages used
+* Home/index page provides brief information on project requirements
+* Prediction page provides inputs for model prediction, as well as the final output
+* Results page runs Tableau workbook within webpage
+* Javascript page transforms inputs into numerical df, then sends to app page, where model is run
 
 ## Content:
 
