@@ -31,9 +31,9 @@ def index():
 
 
 # Set route : Prediction
-@app.route("/prediction")
-def map_view():
-    return render_template("prediction.html")
+# @app.route("/prediction")
+# def map_view():
+#     return render_template("prediction.html")
 
 
 @app.route("/results")
@@ -53,18 +53,18 @@ def ValuePredictor():
     # result = classifier.predict(to_predict_list)
     # return result[0]
 
-@app.route("/receiver", methods=["POST"])
-def postME():
- data = request.get_json()
- jsonifydata = jsonify(data)
- print(jsonifydata)
- deJSON(jsonifydata)
- return jsonifydata
+# @app.route("/receiver", methods=["POST"])
+# def postME():
+#  data = request.get_json()
+#  jsonifydata = jsonify(data)
+#  print(jsonifydata)
+#  deJSON(jsonifydata)
+#  return jsonifydata
 
-def deJSON(data):
-    jdata = pd.read_json(data)
-    print(jdata)
-    return jdata
+# def deJSON(data):
+#     jdata = pd.read_json(data)
+#     print(jdata)
+#     return jdata
 
     # scaler = StandardScaler()
     # X_scaler = scaler.fit(df_inputs)
@@ -80,10 +80,13 @@ def deJSON(data):
     
 
 
-# @app.route("/your_url", methods = ["post"])
-# def printer():
-#   new_freq = request.args.get('new_freq')
-#   print(data)
+@app.route("/prediction", methods=["GET", "POST"])
+def map_view():
+    input_values = request.form
+    print(input_values)
+    return render_template("good_predict.html")
+    
+
 
 
 

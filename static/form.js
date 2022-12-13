@@ -196,24 +196,24 @@ function amendDF() {
        let df_inputs = default_df
 
        console.log(df_inputs)
-       attempt(df_inputs)
+       // attempt(df_inputs)
 }
 
-function attempt(data){
-       fetch("/receiver", 
-       {
-       method: 'POST',
-       headers: {
-       'Content-type': 'application/json',
-       'Accept': 'application/json'
-       },
-       body:JSON.stringify(data)}).then(res=>{
-       if(res.ok){
-       return res.json()
-       }else{
-       alert("something is wrong")
-       }
-       })
+// function attempt(data){
+//        fetch("/receiver", 
+//        {
+//        method: 'POST',
+//        headers: {
+//        'Content-type': 'application/json',
+//        'Accept': 'application/json'
+//        },
+//        body:JSON.stringify(data)}).then(res=>{
+//        if(res.ok){
+//        return res.json()
+//        }else{
+//        alert("something is wrong")
+//        }
+//        })
 
 
 // function toFlask(data){
