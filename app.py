@@ -6,11 +6,13 @@ import datetime as dt
 import numpy as np
 import pandas as pd
 import psycopg2
-
 import h5py
-from flask import Flask, render_template
+from flask import Flask, render_template, request, jsonify
 import psycopg2
+import requests
 from psycopg2 import OperationalError
+import json
+
 
 # from keras.models import load_model 
 
@@ -44,11 +46,55 @@ def ValuePredictor():
         intercept = hf['intercept'][:]
         classes = hf['classes'][:]
     print(coef)
+#   LogisticRegression = classifier
+    # classifier.coef_ = coef
+    # classifier.intercept_ = intercept
+    # classifier.classes_ = classes
+    # result = classifier.predict(to_predict_list)
+    # return result[0]
+
+@app.route("/receiver", methods=["POST"])
+def postME():
+ data = request.get_json()
+ jsonifydata = jsonify(data)
+ print(jsonifydata)
+ deJSON(jsonifydata)
+ return jsonifydata
+
+def deJSON(data):
+    jdata = pd.read_json(data)
+    print(jdata)
+    return jdata
+
+    # scaler = StandardScaler()
+    # X_scaler = scaler.fit(df_inputs)
+    # to_predict_list = X_scaler.transform(df_inputs)
+    # print(to_predict_list)
+
+#     # result = ValuePredictor(to_predict_list)       
+#     # if int(result)== 1:
+#     #     prediction ='Yes'
+#     # else:
+#     #     prediction ='No'           
+#     return render_template("ddd.html", prediction_text = to_predict_list)
+    
+
+
+# @app.route("/your_url", methods = ["post"])
+# def printer():
+#   new_freq = request.args.get('new_freq')
+#   print(data)
+
 
 
 if __name__ == "__main__":
     app.run(debug=True)
     
+
+
+
+
+# Set route : Results
 
 # @app.route("/receiver", methods=["POST"])
 # def postME():
@@ -57,27 +103,3 @@ if __name__ == "__main__":
 #  return data
 
 # prediction function
-
-
-
-    # LogisticRegression = classifier
-    # classifier.coef_ = coef
-    # classifier.intercept_ = intercept
-    # classifier.classes_ = classes
-    # result = classifier.predict(to_predict_list)
-    # return result[0]
-
-# @app.route("/tester",  methods = ['POST'])
-# def predict():
-#     scaler = StandardScaler()
-#     X_scaler = scaler.fit(df_inputs)
-#     to_predict_list = X_scaler.transform(df_inputs)
-#     result = ValuePredictor(to_predict_list)       
-#     if int(result)== 1:
-#         prediction ='Yes'
-#     else:
-#         prediction ='No'           
-#     return render_template("prediction.html", prediction = prediction)
-
-
-# Set route : Results

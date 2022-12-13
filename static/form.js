@@ -43,6 +43,7 @@ console.log(default_df)
 d3.select("#done").on("click", amendDF)
 
 function amendDF() {
+
        let e = document.getElementById("inlineFormCustomSelect");
        let value = e.value;
        let text = e.options[e.selectedIndex].text;
@@ -112,7 +113,6 @@ function amendDF() {
        let q5 = document.getElementById("q5");
        let value5 = q5.value;
        let new5 = parseInt(value5)
-       console.log(new5)
        default_df["Holding_Policy_Type"] = new5
 
 
@@ -190,10 +190,54 @@ function amendDF() {
        let q10 = document.getElementById("q10");
        let value10 = q10.value;
        console.log(value10)
-       default_df["Reco_Policy_Premium"] = 1
+       num10 = parseInt(value10)
+       default_df["Reco_Policy_Premium"] = num10
        
+       let df_inputs = default_df
 
-       console.log(default_df)
-
-       
+       console.log(df_inputs)
+       attempt(df_inputs)
 }
+
+function attempt(data){
+       fetch("/receiver", 
+       {
+       method: 'POST',
+       headers: {
+       'Content-type': 'application/json',
+       'Accept': 'application/json'
+       },
+       body:JSON.stringify(data)}).then(res=>{
+       if(res.ok){
+       return res.json()
+       }else{
+       alert("something is wrong")
+       }
+       })
+
+
+// function toFlask(data){
+// ajax({
+//        url: '/your_url',
+//        data: {'new_freq':data},
+//        type: 'POST',
+//    dataType: 'json',
+//        success: function(response){
+//            console.log(response);
+//        },
+//        error: function(error){
+//            console.log(error);
+//        }
+//    });
+// }
+// function toFlask(data){
+//        fetch(`${window.origin}/your_url`, {
+//               method: "POST",
+//               credentials: "include",
+//               body: JSON.stringify(data),
+//               cache: "no-cache",
+//               headers: new Headers({
+//                 "content-type": "application/json"
+//               })
+//             })
+// }
