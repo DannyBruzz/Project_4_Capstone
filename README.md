@@ -45,6 +45,7 @@ Project_4_Capstone
 ├── InputData
 │   ├── city1.csv
 │   ├── test.csv
+|   ├── visual.csv
 │   └── quokka.jpg
 ├── Static
 │   ├── style.css
@@ -55,6 +56,7 @@ Project_4_Capstone
 │   └── results.html
 ├── README.md
 ├── Project_4_Proposal.docx
+├── Project_4_pp.pptx
 ├── .gitignore
 ├── app2.py
 
