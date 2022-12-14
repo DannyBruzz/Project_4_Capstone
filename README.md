@@ -45,8 +45,7 @@ Project_4_Capstone
 ├── InputData
 │   ├── city1.csv
 │   ├── test.csv
-|   ├── visual.csv
-│   └── quokka.jpg
+|   └── visual.csv
 ├── Static
 │   ├── style.css
 │   └── modelV1.h5
