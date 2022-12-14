@@ -36,22 +36,27 @@ Web Development:
 ## Content:
 
 ```
-Project  
-├── ETL_Script.ipynb
+Project_4_Capstone
+
+├── Notebooks
+│   ├── model_create.ipynb
+│   ├── tester.ipynb
+│   └── Visuals.ipynb
 ├── InputData
-│   ├── GDP.csv
-│   ├── Gender_StatsData .csv
-│   └── Population.csv
-├── OutputData
-│   ├── GDP%.csv
-│   ├── gender.csv
-│   └── population.csv
-├── Project 2 Report.docx
+│   ├── city1.csv
+│   ├── test.csv
+│   └── quokka.jpg
+├── Static
+│   ├── style.css
+│   └── modelV1.h5
+├── Templates
+│   ├── good_predict.html
+│   ├── index.html
+│   └── results.html
 ├── README.md
-├── SQLkeysTemp.py
+├── Project_4_Proposal.docx
 ├── .gitignore
-├── image
-│   └── universe25.png
+├── app2.py
 
 ```
 
