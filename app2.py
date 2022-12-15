@@ -58,11 +58,11 @@ def index():
 
 
 @app.route("/results")
-def dash_view():
+def result_view():
     return render_template("results.html")
 
 @app.route("/prediction", methods=["GET", "POST"])
-def map_view():
+def predict_view():
     if request.method == "POST":
         input_values = request.form
         imput_list.append(
